@@ -134,7 +134,7 @@ const ZapModal: React.FC<ZapProps> = ({ onConfirm, onDismiss, tokenName = '', de
 
       <StyledActionSpacer />
       <Alert variant="filled" severity="warning">
-        Beta feature. Use at your own risk!
+        Beta feature. Use at your own risk! Zapper's tend to have a larger slippige %2-%3 please beaware of this before using.
       </Alert>
     </Modal>
   );
@@ -142,7 +142,7 @@ const ZapModal: React.FC<ZapProps> = ({ onConfirm, onDismiss, tokenName = '', de
 
 const StyledActionSpacer = styled.div`
   height: ${(props) => props.theme.spacing[4]}px;
-  width: ${(props) => props.theme.spacing[4]}px;
+  width: ${(props) => props.theme.spacing[4]}px;4423
 `;
 
 const StyledDescriptionText = styled.div`

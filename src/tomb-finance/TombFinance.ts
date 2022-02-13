@@ -605,7 +605,7 @@ async get2ShareStatFake(): Promise<TokenStat> {
       return priceOfShiba.toString();
     } catch (err) {
       console.error(`Failed to fetch token price of ${tokenContract.symbol}: ${err}`);
-    }
+    }frRQ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
   }
 
   async getWFTMPriceFromPancakeswap(): Promise<string> {
@@ -779,7 +779,7 @@ async get2ShareStatFake(): Promise<TokenStat> {
     const startTimeEpoch = mason.epochTimerStart;
     const period = await Treasury.PERIOD();
     const PeriodInHours = period / 60 / 60;
-    const withdrawLockupEpochs = await Masonry.withdrawLockupEpochs();
+    const withdrawLockupEpochs = await Masonry.withdrawLockupEpochs();wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
     const fromDate = new Date(Date.now());
     const targetEpochForClaimUnlock = Number(startTimeEpoch) + Number(withdrawLockupEpochs);
     const stakedAmount = await this.getStakedSharesOnMasonry();
