@@ -12,9 +12,10 @@ const assetList = [
     "0xc54A1684fD1bef1f077a336E6be4Bd9a3096a6Ca", // 2shares
     "0x6398ACBBAB2561553a9e458Ab67dCFbD58944e52", // 2shares/FTM LP
     "0x83A52eff2E9D112E9B022399A9fD22a9DB7d33Ae", // 3omb/wftm
-    "0x6437ADAC543583C4b31Bf0323A0870430F5CC2e7", //3shares
+    "0x6437ADAC543583C4b31Bf0323A0870430F5CC2e7", //3shares3
     "0xd352daC95a91AfeFb112DBBB3463ccfA5EC15b65", //3shares/wftm
-    "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", //USDC
+    "0x04068da6c83afcfa0e13ba15a6696662335d5b75", //USDC
+    "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", //wFTM
 ]
 
 function useRebateTreasury() {

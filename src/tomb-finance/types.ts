@@ -11,7 +11,6 @@ export interface BankInfo {
   earnTokenName: ContractName;
   sort: number;
   site: string;
-  Boosted: string;
   buyLink: string;
   finished: boolean;
   closedForStaking: boolean;

@@ -102,14 +102,14 @@ const Nav = () => {
             <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
               {/* <a className={ classes.brandLink } href="/">2omb Finance</a> */}
               <Link to="/" color="inherit" className={classes.brandLink}>
-                3omb Finance
+                2OMB | 3OMB 
               </Link>
             </Typography>
             <Box mr={5}>
               <Link color="color" to="/" className={classes.link}>
                 Home
               </Link>
-              <Link color="textPrimary" to="/farms" className={classes.link}>
+              <Link color="textPrimary" to="/Farms" className={classes.link}>
                 3Farms
               </Link>
               <Link color="textPrimary" to="/boardroom" className={classes.link}>
@@ -139,10 +139,10 @@ const Nav = () => {
               <Link color="textPrimary" to="/regulations" className={classes.link}>
                 Regulations
               </Link> */}
-              <a href="https://beluga.fi" target="_blank" className={classes.link}>
+              <a href="https://www.devilfinance.io/" target="_blank" className={classes.link}>
                 Vaults
               </a>
-              <a href="https://snapshot.org/#/forgiving.forg.eth" target="_blank" className={classes.link}>
+              <a href="https://snapshot.org/" target="_blank" className={classes.link}>
                 Governance
               </a>
               <a href="https://gedeon-crypto.gitbook.io/3omb.finance/" target="_blank" className={classes.link}>
@@ -198,10 +198,10 @@ const Nav = () => {
                 <ListItemLink primary="SBS" to="/sbs" />
                 <ListItemLink primary="Liquidity" to="/liquidity" />
                 <ListItemLink primary="Regulations" to="/regulations" /> */}
-                <ListItem button component="a" href="https://beluga.fi">
+                <ListItem button component="a" href="https://www.devilfinance.io/i">
                   <ListItemText>Vaults</ListItemText>
                 </ListItem>
-                <ListItem button component="a" href="https://snapshot.org/#/forgiving.forg.eth">
+                <ListItem button component="a" href="https://snapshot.org/">
                   <ListItemText>Governance</ListItemText>
                 </ListItem>
                 <ListItem button component="a" href="https://gedeon-crypto.gitbook.io/3omb.finance/">
