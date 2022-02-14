@@ -605,7 +605,7 @@ async get2ShareStatFake(): Promise<TokenStat> {
       return priceOfShiba.toString();
     } catch (err) {
       console.error(`Failed to fetch token price of ${tokenContract.symbol}: ${err}`);
-    }frRQ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+    }
   }
 
   async getWFTMPriceFromPancakeswap(): Promise<string> {
