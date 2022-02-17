@@ -154,7 +154,7 @@ const Home = () => {
         <Grid item xs={12} sm={6}>
           <Paper style={{ backgroundColor: "transparent", boxShadow: "none", border: "1px solid var(--white)" }}>
             <Box p={4}>
-              <h2>Welcome to 3omb Finance!</h2>
+              <h2>Welcome to 3omb!</h2>
               <p>An algorithmic stablecoin on the Fantom Opera blockchain, pegged to the price of 1 FTM</p>
               <p>3omb utilizes multiple bonding mechanisms at the <StyledLink href="/">3DAO</StyledLink> as well as seigniorage.</p>
               <p>Built on top of <StyledLink target="_blank" href="https://2omb.finance">2omb.finance</StyledLink>.</p>

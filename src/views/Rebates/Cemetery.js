@@ -57,11 +57,11 @@ const Cemetery = () => {
   const rebateStats = useRebateTreasury()
   console.log(rebateStats)
   const [claimable3omb, setClaimable3omb] = useState(0);
-  const [ vested, setVested ] = useState(0)
+  const [vested, setVested] = useState(0)
 
   useEffect(() => {
     updateVesting()
-    const interval = setInterval(updateVesting, 5000) 
+    const interval = setInterval(updateVesting, 5000)
     return () => clearInterval(interval)
   }, [])
 
@@ -74,7 +74,7 @@ const Cemetery = () => {
     const vesting = await rebateStats.RebateTreasury.methods.vesting(address).call()
     setClaimable3omb(+web3.utils.fromWei(claimable))
     setVested(+web3.utils.fromWei(BN(vesting.amount).sub(BN(vesting.claimed))))
-}
+  }
 
   async function claimTomb() {
     console.log("claiming the tomb")
@@ -126,21 +126,23 @@ const Cemetery = () => {
                 </Grid>
               </Box>
               <div hidden={activeBanks.filter((bank) => bank.sectionInUI === 0).length === 0}>
-                  <Typography color="textPrimary" variant="h4" gutterBottom style={{ marginTop: '35px', marginBottom: '30px' }}>
-                    Bondable Assets
-                  </Typography>
-            <Alert variant="filled" severity="warning">
-                    <h1>This page is under active maintenance. We have set the bond Rate to 0. This means you can send money but will get nothing in return!!!</h1>
-            </Alert>
-                  <Grid container spacing={3}>
-                    {activeBanks
-                      .filter((bank) => bank.sectionInUI === 3)
-                      .map((bank) => (
-                        <React.Fragment key={bank.name}>
-                          <CemeteryCard bank={bank} />
-                        </React.Fragment>
-                      ))}
-                  </Grid>
+                <Typography color="textPrimary" variant="h4" gutterBottom style={{ marginTop: '35px', marginBottom: '30px' }}>
+                  Bondable Assets
+                </Typography>
+                <Box mb={3} style={{ width: '1000px' }}>
+                  <Alert variant="filled" severity="warning">
+                    This page is under active maintenance. We have set the bond Rate to 0. This means you can send money but will get nothing in return!!!
+                  </Alert>
+                </Box>
+                <Grid container spacing={3}>
+                  {activeBanks
+                    .filter((bank) => bank.sectionInUI === 3)
+                    .map((bank) => (
+                      <React.Fragment key={bank.name}>
+                        <CemeteryCard bank={bank} />
+                      </React.Fragment>
+                    ))}
+                </Grid>
               </div>
               <Box mt={2}>
                 <Grid container justify="center" spacing={3}>

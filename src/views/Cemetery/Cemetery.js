@@ -82,7 +82,7 @@ const Cemetery = () => {
                   </Grid>
                 </div> */}
                 
-                <Alert variant="filled" severity="info" style={{ marginTop: '50px' }}>
+                {/* <Alert variant="filled" severity="info" style={{ marginTop: '50px' }}>
                   All below pools have ended. Please unstake and collect your rewards.
                 </Alert>
 
@@ -99,7 +99,7 @@ const Cemetery = () => {
                         </React.Fragment>
                       ))}
                   </Grid>
-                </div>
+                </div> */}
               </Box>
             </Container>
           ) : (

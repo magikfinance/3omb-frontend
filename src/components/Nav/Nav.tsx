@@ -103,7 +103,7 @@ const Nav = () => {
             <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
               {/* <a className={ classes.brandLink } href="/">2omb Finance</a> */}
               <Link to="/" color="inherit" className={classes.brandLink}>
-                3omb Finance
+                3omb
               </Link>
             </Typography>
             <Box mr={5}>
@@ -143,9 +143,9 @@ const Nav = () => {
               <a href="https://www.devilfinance.io" target="_blank" className={classes.link}>
                 Vaults
               </a>
-              <a href="https://snapshot.org/#/forgiving.forg.eth" target="_blank" className={classes.link}>
+              {/* <a href="https://snapshot.org/#/forgiving.forg.eth" target="_blank" className={classes.link}>
                 Governance
-              </a>
+              </a> */}
               <a href="https://gedeon-crypto.gitbook.io/3omb.finance/" target="_blank" className={classes.link}>
                 Docs
               </a>
@@ -167,7 +167,7 @@ const Nav = () => {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" noWrap>
-            2 | 3omb
+              3omb
             </Typography>
 
             <Drawer
