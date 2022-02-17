@@ -3,10 +3,10 @@
 }
 
 :root {
-    --black: #16191e;
-    --white: #e6e9ee;
-    --accent: #ff4949;
-    --accent-light: #ff6464;
+  --black: #16191e;
+  --white: #e6e9ee;
+  --accent: #ff4949;
+  --accent-light: #ff6464;
 }
 
 body,
@@ -93,13 +93,13 @@ footer .a:hover {
 }
 
 .MuiButton-contained {
-    color: var(--black) !important;
-    background-color: var(--white) !important;
+  color: var(--black) !important;
+  background-color: var(--white) !important;
 }
 
 .MuiButton-containedPrimary {
-    color: var(--white) !important;
-    background-color: var(--accent) !important;
+  color: var(--white) !important;
+  background-color: var(--accent) !important;
 }
 
 code {
@@ -119,6 +119,16 @@ code {
 .wallet-button:hover {
     background-color: black !important;
     color: #757ce8 !important;
+}
+
+.account {
+  display: flex;
+  align-items: center;
+}
+
+.account > img,
+.account > div {
+  margin-right: 8px;
 }
 
 @media (max-width: 600px) {

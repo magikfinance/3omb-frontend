@@ -15,6 +15,7 @@ const assetList = [
     "0x6437ADAC543583C4b31Bf0323A0870430F5CC2e7", //3shares
     "0xd352daC95a91AfeFb112DBBB3463ccfA5EC15b65", //3shares/wftm
     "0x04068DA6C83AFCFA0e13ba15A6696662335D5B75", //USDC
+    "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", //WFTM
 ]
 
 function useRebateTreasury() {
