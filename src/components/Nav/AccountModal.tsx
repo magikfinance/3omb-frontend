@@ -30,7 +30,7 @@ const AccountModal: React.FC<ModalProps> = ({ onDismiss }) => {
           <TokenSymbol symbol="TOMB" />
           <StyledBalance>
             <StyledValue>{displayTombBalance}</StyledValue>
-            <Label text="3OMB Available" variant="primary" />
+            <Label text="DARK MAGIK Available" variant="primary" />
           </StyledBalance>
         </StyledBalanceWrapper>
 

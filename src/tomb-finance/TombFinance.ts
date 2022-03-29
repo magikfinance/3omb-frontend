@@ -46,7 +46,7 @@ export class TombFinance {
     for (const [symbol, [address, decimal]] of Object.entries(externalTokens)) {
       this.externalTokens[symbol] = new ERC20(address, provider, symbol, decimal);
     }
-    this.TOMB = new ERC20(deployments.tomb.address, provider, '3OMB');
+    this.TOMB = new ERC20(deployments.tomb.address, provider, 'DARK MAGIK');
     this.TSHARE = new ERC20(deployments.tShare.address, provider, '3SHARE');
     this.TBOND = new ERC20(deployments.tBond.address, provider, '3BOND');
     this.FTM = this.externalTokens['WFTM'];
@@ -234,7 +234,7 @@ export class TombFinance {
     console.log("deposit token price:", depositTokenPrice)
     const stakeInPool = await depositToken.balanceOf(bank.address);
     const TVL = Number(depositTokenPrice) * Number(getDisplayBalance(stakeInPool, depositToken.decimal));
-    const stat = bank.earnTokenName === '3OMB' ? await this.getTombStat() : await this.getShareStat();
+    const stat = bank.earnTokenName === 'DARK MAGIK' ? await this.getTombStat() : await this.getShareStat();
     const tokenPerSecond = await this.getTokenPerSecond(
       bank.earnTokenName,
       bank.contract,
@@ -270,7 +270,7 @@ export class TombFinance {
     poolContract: Contract,
     depositTokenName: string,
   ) {
-    if (earnTokenName === '3OMB') {
+    if (earnTokenName === 'DARK MAGIK') {
       if (!contractName.endsWith('TombRewardPool')) {
         const rewardPerSecond = await poolContract.tombPerSecond();
         if (depositTokenName === '2SHARES') {
@@ -301,7 +301,7 @@ export class TombFinance {
       return await poolContract.epochTombPerSecond(0);
     }
     const rewardPerSecond = await poolContract.tSharePerSecond();
-    if (depositTokenName.startsWith('3OMB')) {
+    if (depositTokenName.startsWith('DARK MAGIK')) {
       return rewardPerSecond.mul(35500).div(89500);
     } else if (depositTokenName.startsWith('2OMB')) {
       return rewardPerSecond.mul(15000).div(89500);
@@ -327,7 +327,7 @@ export class TombFinance {
       tokenPrice = priceOfOneFtmInDollars;
     } else {
       console.log("token name:", tokenName)
-      if (tokenName === '3OMB-WFTM LP') {
+      if (tokenName === 'DARK MAGIK-WFTM LP') {
         tokenPrice = await this.getLPTokenPrice(token, this.TOMB, true, false);
       } else if (tokenName === '3SHARES-WFTM LP') {
         tokenPrice = await this.getLPTokenPrice(token, this.TSHARE, false, false);
@@ -489,7 +489,7 @@ async get2ShareStatFake(): Promise<TokenStat> {
   ): Promise<BigNumber> {
     const pool = this.contracts[poolName];
     try {
-      if (earnTokenName === '3OMB') {
+      if (earnTokenName === 'DARK MAGIK') {
         return await pool.pendingTOMB(poolId, account);
       } else {
         return await pool.pendingShare(poolId, account);

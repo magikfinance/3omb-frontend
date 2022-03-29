@@ -4,6 +4,7 @@ import { Route, Switch, useRouteMatch } from 'react-router-dom';
 import Bank from '../Bank';
 import { makeStyles } from '@material-ui/core/styles';
 import Web3 from "web3"
+import HomeImage from '../../assets/img/home.png';
 
 import { Box, Card, CardContent, Button, Typography, Grid } from '@material-ui/core';
 
@@ -24,14 +25,9 @@ const BN = n => new web3.utils.BN(n)
 
 const BackgroundImage = createGlobalStyle`
   body {
-    background-color: var(--black);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='32' viewBox='0 0 16 32'%3E%3Cg fill='%231D1E1F' fill-opacity='0.4'%3E%3Cpath fill-rule='evenodd' d='M0 24h4v2H0v-2zm0 4h6v2H0v-2zm0-8h2v2H0v-2zM0 0h4v2H0V0zm0 4h2v2H0V4zm16 20h-6v2h6v-2zm0 4H8v2h8v-2zm0-8h-4v2h4v-2zm0-20h-6v2h6V0zm0 4h-4v2h4V4zm-2 12h2v2h-2v-2zm0-8h2v2h-2V8zM2 8h10v2H2V8zm0 8h10v2H2v-2zm-2-4h14v2H0v-2zm4-8h6v2H4V4zm0 16h6v2H4v-2zM6 0h2v2H6V0zm0 24h2v2H6v-2z'/%3E%3C/g%3E%3C/svg%3E");
-}
-
-* {
-    border-radius: 0 !important;
-    box-shadow: none !important;
-}
+    background: url(${HomeImage}) no-repeat !important;
+    background-size: cover !important;
+  }
 `;
 
 const useStyles = makeStyles((theme) => ({
@@ -56,7 +52,7 @@ const Cemetery = () => {
 
   const rebateStats = useRebateTreasury()
   console.log(rebateStats)
-  const [claimable3omb, setClaimable3omb] = useState(0);
+  const [claimable2magik, setClaimable2magik] = useState(0);
   const [ vested, setVested ] = useState(0)
 
   useEffect(() => {
@@ -72,7 +68,7 @@ const Cemetery = () => {
 
     const claimable = await rebateStats.RebateTreasury.methods.claimableTomb(address).call()
     const vesting = await rebateStats.RebateTreasury.methods.vesting(address).call()
-    setClaimable3omb(+web3.utils.fromWei(claimable))
+    setClaimable2magik(+web3.utils.fromWei(claimable))
     setVested(+web3.utils.fromWei(BN(vesting.amount).sub(BN(vesting.claimed))))
 }
 
@@ -99,7 +95,7 @@ const Cemetery = () => {
           {!!account ? (
             <>
               <Typography color="textPrimary" align="center" variant="h3" gutterBottom style={{ marginBottom: '40px' }}>
-                3DAO
+                DMDAO
               </Typography>
               <Box mt={2}>
                 <Grid container justify="center" spacing={3}>
@@ -107,7 +103,7 @@ const Cemetery = () => {
                     <Card className={classes.gridItem}>
                       <CardContent align="center">
                         <Typography variant="h5">
-                          3OMB Price <small>(TWAP)</small>
+                          DARK MAGIK Price <small>(TWAP)</small>
                         </Typography>
                         <Typography variant="h6">{tombPriceInFTM ? tombPriceInFTM : '-.----'} FTM</Typography>
                       </CardContent>
@@ -148,10 +144,10 @@ const Cemetery = () => {
                     <Card style={{ height: "auto" }}>
                       <CardContent align="center">
                         <Typography variant="h5">
-                          3OMB Vesting
+                          DARK MAGIK Vesting
                         </Typography>
                         <Typography variant="h6">{vested.toFixed(4)} Total Vested</Typography>
-                        <Typography variant="h6">{claimable3omb.toFixed(4)} Claimable</Typography>
+                        <Typography variant="h6">{claimable2magik.toFixed(4)} Claimable</Typography>
                         <Button color="primary" size="small" variant="contained" onClick={claimTomb} style={{ marginTop: "8px" }}>
                           CLAIM
                         </Button>

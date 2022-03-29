@@ -44,7 +44,7 @@ const Footer = () => {
         <Grid container>
           <Grid item xs={6}>
             <Typography variant="body2" color="textPrimary" align="left">
-              {'Copyright © 3omb Finance '}
+              {'Copyright © Dark Magik Finance '}
               {new Date().getFullYear()}
             </Typography>
           </Grid>

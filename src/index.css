@@ -73,6 +73,9 @@ body {
     left: 0;
     height: 100%;
     width: 100%;
+    background-position: center center !important;
+    background-attachment: fixed !important;
+    background-size: cover !important;
 }
 
 h1,

@@ -1,28 +1,28 @@
 import React from 'react';
 
 //Graveyard ecosystem logos
-import tombLogo from '../../assets/img/3OMB.svg';
-import tShareLogo from '../../assets/img/3SHARES.svg';
+import tombLogo from '../../assets/img/3OMB.png';
+import tShareLogo from '../../assets/img/3OMB.png';
 import tombLogoPNG from '../../assets/img/3OMB.png';
-import tShareLogoPNG from '../../assets/img/3SHARES.png';
-import tBondLogo from '../../assets/img/3BOND-01.png';
+import tShareLogoPNG from '../../assets/img/3OMB.png';
+import tBondLogo from '../../assets/img/3OMB.png';
 
-import tombFtmLpLogo from '../../assets/img/tomb_ftm_lp.png';
-import tshareFtmLpLogo from '../../assets/img/tshare_ftm_lp.png';
+import tombFtmLpLogo from '../../assets/img/3OMB.png';
+import tshareFtmLpLogo from '../../assets/img/3OMB.png';
 
 import wftmLogo from '../../assets/img/fantom-ftm-logo.png';
 import booLogo from '../../assets/img/spooky.png';
 import belugaLogo from '../../assets/img/BELUGA.png';
-import twoshareLogo from '../../assets/img/t_2SHARE-01.png';
-import twoombLogo from '../../assets/img/t_2OMB-01.png';
+import twoshareLogo from '../../assets/img/3OMB.png';
+import twoombLogo from '../../assets/img/3OMB.png';
 import zooLogo from '../../assets/img/zoo_logo.svg';
 import shibaLogo from '../../assets/img/shiba_logo.svg';
 import bifiLogo from '../../assets/img/COW.svg';
 import mimLogo from '../../assets/img/mimlogopng.png';
 import bloomLogo from '../../assets/img/BLOOM.jpg';
-import TwoombLPLogo from '../../assets/img/2OMB-WFTM.png';
-import TwosharesLPLogo from '../../assets/img/2SHARES-WFTM.png';
-import TwoombTwosharesLPLogo from '../../assets/img/2OMB-2SHARES.png';
+import TwoombLPLogo from '../../assets/img/3OMB.png';
+import TwosharesLPLogo from '../../assets/img/3OMB.png';
+import TwoombTwosharesLPLogo from '../../assets/img/3OMB.png';
 
 import UsdcLogo from '../../assets/img/USDC.png';
 
