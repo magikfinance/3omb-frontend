@@ -23,7 +23,6 @@ const Farms = lazy(() => import('./views/Cemetery'));
 const Boardroom = lazy(() => import('./views/Masonry'));
 const Rebates = lazy(() => import('./views/Rebates'));
 const Bonds = lazy(() => import('./views/Pit'));
-const Treasury = lazy(() => import('./views/Treasury'));
 // const SBS = lazy(() => import('./views/Sbs'));
 // const Liquidity = lazy(() => import('./views/Liquidity'));
 
@@ -63,9 +62,6 @@ const App: React.FC = () => {
             <Route path="/bonds">
               <Bonds />
             </Route>
-            <Route path="/treasury">
-              <Treasury />
-            </Route>
             {/* <Route path="/sbs">
               <SBS />
             </Route>
@@ -95,7 +91,7 @@ const Providers: React.FC = ({ children }) => {
             walletconnect: { rpcUrl: config.defaultProvider },
             walletlink: {
               url: config.defaultProvider,
-              appName: 'Dark Magik Finance',
+              appName: 'PHOENIX Finance',
               appLogoUrl: 'https://github.com/2omb/2magik-frontend/blob/8ab3b1f5ecc7d5dad5b856f160d6e7afb8357560/src/assets/img/2OMB-2SHARES.png',
             },
           }}

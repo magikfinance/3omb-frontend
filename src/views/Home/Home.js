@@ -150,13 +150,10 @@ const Home = () => {
         <Grid item xs={12} sm={6}>
           <Paper style={{ backgroundColor: "transparent", boxShadow: "none", border: "1px solid var(--white)" }}>
             <Box p={4}>
-              <h2>Welcome to Dark Magik Finance!</h2>
-              <p>Magik is real</p>
-              <p>Dark Magik utilizes multiple bonding mechanisms at the <StyledLink href="/">DMDAO</StyledLink> as well as seigniorage.</p>
-              <p>Built on top of <StyledLink target="_blank" href="https://magik.finance">magik.finance</StyledLink>.</p>
+              <h2>This is Phoenix Finance!</h2>
               <p>
-                Stake your DARK MAGIK-WFTM LP in the <StyledLink href="/farms">Ritual Room</StyledLink> to earn DMSHARES rewards.
-                Then stake your earned DMSHARES in the <StyledLink href="/">Wizards Tower</StyledLink> to maximize profits!
+                Stake your PHOENIX-BUSD LP in the <StyledLink href="/farms">PFarm</StyledLink> to earn PSHARES rewards.
+                Then stake your earned PSHARES in the <StyledLink href="/">PRoom</StyledLink> to maximize profits!
               </p>
             </Box>
           </Paper>
@@ -164,7 +161,7 @@ const Home = () => {
         {/* <Grid container justify="center">
             <Box mt={3} style={{ width: '1000px' }}>
             <Alert variant="filled" severity="warning">
-                Do your own research before investing. Investing is risky and may result in monetary loss. Dark Magik is beta software and may contain bugs. By using Dark Magik, you agree that the 2omb and Dark Magik team is not responsible for any financial losses from investing in 2omb or 2Magik.
+                Do your own research before investing. Investing is risky and may result in monetary loss. PHOENIX is beta software and may contain bugs. By using PHOENIX, you agree that the 2omb and PHOENIX team is not responsible for any financial losses from investing in 2omb or 2Magik.
             </Alert>
             </Box>
         </Grid> */}
@@ -212,50 +209,28 @@ const Home = () => {
                 style={{ marginRight: '10px' }}
                 className={classes.button}
               >
-                Buy DARK MAGIK
+                Buy PHOENIX
               </Button>
               <Button variant="contained" target="_blank" href="https://spookyswap.finance/swap?outputCurrency=0x6437adac543583c4b31bf0323a0870430f5cc2e7" style={{ marginRight: '10px' }} className={classes.button}>
-                Buy DMSHARES
+                Buy PSHARES
               </Button>
               <Button variant="contained" target="_blank" href="https://dexscreener.com/fantom/0x83a52eff2e9d112e9b022399a9fd22a9db7d33ae" style={{ marginRight: '10px' }} className={classes.button}>
-                DARK MAGIK Chart
+                PHOENIX Chart
               </Button>
               <Button variant="contained" target="_blank" href="https://dexscreener.com/fantom/0xd352dac95a91afefb112dbbb3463ccfa5ec15b65" className={classes.button}>
-                DMSHARES Chart
+                PSHARES Chart
               </Button>
             </CardContent>
           </Card>
         </Grid>
 
         {/* TOMB */}
-        <Grid item xs={12} sm={3}>
-          <Card style={{ backgroundColor: "transparent", boxShadow: "none", border: "1px solid var(--white)" }}>
-            <CardContent align="center" style={{ position: 'relative' }}>
-              <h2>FTM</h2>
-              <Box mt={2} style={{ backgroundColor: "transparent !important" }}>
-                <CardIcon style={{ backgroundColor: "transparent !important" }}>
-                  <TokenSymbol symbol="wFTM" style={{ backgroundColor: "transparent !important" }} />
-                </CardIcon>
-              </Box>
-              Current Price
-              <Box>
-                <span style={{ fontSize: '30px' }}>${ftmPrice ? ftmPrice : '-.----'} USD</span>
-              </Box>
-              <span style={{ fontSize: '14px' }}>
-                Market Cap: ${ftmMarketCap} <br />
-                Price Change 24h: {ftmPriceChange.toFixed(2)}% <br />
-                <br />
-                <br />
-              </span>
-            </CardContent>
-          </Card>
-        </Grid>
 
         {/* TOMB */}
         <Grid item xs={12} sm={3}>
           <Card style={{ backgroundColor: "transparent", boxShadow: "none", border: "1px solid var(--white)" }}>
             <CardContent align="center" style={{ position: 'relative' }}>
-              <h2>DARK MAGIK</h2>
+              <h2>PHOENIX</h2>
               {/* <Button
                 onClick={() => {
                   tombFinance.watchAssetInMetamask('TOMB');
@@ -274,7 +249,7 @@ const Home = () => {
               </Box>
               Current Price
               <Box>
-                <span style={{ fontSize: '30px' }}>{tombPriceInFTM ? tombPriceInFTM : '-.----'} FTM</span>
+                <span style={{ fontSize: '30px' }}>{tombPriceInFTM ? tombPriceInFTM : '-.----'} USD</span>
               </Box>
               <Box>
                 <span style={{ fontSize: '18px', alignContent: 'flex-start' }}>
@@ -294,7 +269,7 @@ const Home = () => {
         <Grid item xs={12} sm={3}>
           <Card style={{ backgroundColor: "transparent", boxShadow: "none", border: "1px solid var(--white)" }}>
             <CardContent align="center" style={{ position: 'relative' }}>
-              <h2>DMSHARES</h2>
+              <h2>PSHARES</h2>
               {/* <Button
                 onClick={() => {
                   tombFinance.watchAssetInMetamask('TSHARE');
@@ -313,7 +288,7 @@ const Home = () => {
               </Box>
               Current Price
               <Box>
-                <span style={{ fontSize: '30px' }}>{tSharePriceInFTM ? tSharePriceInFTM : '-.----'} FTM</span>
+                <span style={{ fontSize: '30px' }}>{tSharePriceInFTM ? tSharePriceInFTM : '-.----'} USD</span>
               </Box>
               <Box>
                 <span style={{ fontSize: '18px' }}>${tSharePriceInDollars ? tSharePriceInDollars : '-.--'}</span>
@@ -331,7 +306,7 @@ const Home = () => {
         <Grid item xs={12} sm={3}>
           <Card style={{ backgroundColor: "transparent", boxShadow: "none", border: "1px solid var(--white)" }}>
             <CardContent align="center" style={{ position: 'relative' }}>
-              <h2>DMBOND</h2>
+              <h2>PBond</h2>
               {/* <Button
                 onClick={() => {
                   tombFinance.watchAssetInMetamask('TBOND');
@@ -350,7 +325,7 @@ const Home = () => {
               </Box>
               Current Price
               <Box>
-                <span style={{ fontSize: '30px' }}>{tBondPriceInFTM ? tBondPriceInFTM : '-.----'} FTM</span>
+                <span style={{ fontSize: '30px' }}>{tBondPriceInFTM ? tBondPriceInFTM : '-.----'} USD</span>
               </Box>
               <Box>
                 <span style={{ fontSize: '18px' }}>${tBondPriceInDollars ? tBondPriceInDollars : '-.--'}</span>
@@ -359,64 +334,6 @@ const Home = () => {
                 Market Cap: ${(tBondCirculatingSupply * tBondPriceInDollars).toFixed(2)} <br />
                 Circulating Supply: {tBondCirculatingSupply} <br />
                 Total Supply: {tBondTotalSupply}
-              </span>
-            </CardContent>
-          </Card>
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <Card style={{ backgroundColor: "transparent", boxShadow: "none", border: "1px solid var(--white)" }}>
-            <CardContent align="center">
-              <h2>DARK MAGIK-WFTM Spooky LP</h2>
-              <Box mt={2}>
-                <CardIcon>
-                  <TokenSymbol symbol="TOMB-FTM-LP" />
-                </CardIcon>
-              </Box>
-              {/*
-              <Box mt={2}>
-                <Button color="primary" disabled={true} onClick={onPresentTombZap} variant="contained">
-                  Zap In
-                </Button>
-              </Box>*/}
-              <Box mt={2}>
-                <span style={{ fontSize: '26px' }}>
-                  {tombLPStats?.tokenAmount ? tombLPStats?.tokenAmount : '-.--'} DARK MAGIK /{' '}
-                  {tombLPStats?.ftmAmount ? tombLPStats?.ftmAmount : '-.--'} FTM
-                </span>
-              </Box>
-              <Box style={{ fontSize: '18px' }}>${tombLPStats?.priceOfOne ? tombLPStats.priceOfOne : '-.--'}</Box>
-              <span style={{ fontSize: '14px' }}>
-                Liquidity: ${tombLPStats?.totalLiquidity ? tombLPStats.totalLiquidity : '-.--'} <br />
-                Total supply: {tombLPStats?.totalSupply ? tombLPStats.totalSupply : '-.--'}
-              </span>
-            </CardContent>
-          </Card>
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <Card style={{ backgroundColor: "transparent", boxShadow: "none", border: "1px solid var(--white)" }}>
-            <CardContent align="center">
-              <h2>DMSHARES-WFTM Spooky LP</h2>
-              <Box mt={2}>
-                <CardIcon>
-                  <TokenSymbol symbol="TSHARE-FTM-LP" />
-                </CardIcon>
-              </Box>
-              {/*<Box mt={2}>
-                <Button color="primary" onClick={onPresentTshareZap} variant="contained">
-                  Zap In
-                </Button>
-            </Box>*/}
-              <Box mt={2}>
-                <span style={{ fontSize: '26px' }}>
-                  {tshareLPStats?.tokenAmount ? tshareLPStats?.tokenAmount : '-.--'} 3SHARE /{' '}
-                  {tshareLPStats?.ftmAmount ? tshareLPStats?.ftmAmount : '-.--'} FTM
-                </span>
-              </Box>
-              <Box style={{ fontSize: '18px' }}>${tshareLPStats?.priceOfOne ? tshareLPStats.priceOfOne : '-.--'}</Box>
-              <span style={{ fontSize: '14px' }}>
-                Liquidity: ${tshareLPStats?.totalLiquidity ? tshareLPStats.totalLiquidity : '-.--'}
-                <br />
-                Total supply: {tshareLPStats?.totalSupply ? tshareLPStats.totalSupply : '-.--'}
               </span>
             </CardContent>
           </Card>

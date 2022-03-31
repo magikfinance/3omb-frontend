@@ -67,7 +67,7 @@ const Pit: React.FC = () => {
         {!!account ? (
           <>
             <Typography color="textPrimary" align="center" variant="h3" gutterBottom>
-              3Bonds
+              PBOND
             </Typography>
             <Route exact path={path}>
               <PageHeader icon={'🏦'} subtitle="Earn premiums upon redemption" />
@@ -77,13 +77,13 @@ const Pit: React.FC = () => {
                 <ExchangeCard
                   action="Purchase"
                   fromToken={tombFinance.TOMB}
-                  fromTokenName="DARK MAGIK"
+                  fromTokenName="PHOENIX"
                   toToken={tombFinance.TBOND}
-                  toTokenName="3BOND"
+                  toTokenName="PBOND"
                   priceDesc={
                     !isBondPurchasable
-                      ? 'DARK MAGIK is over peg'
-                      : getDisplayBalance(bondsPurchasable, 18, 4) + ' 3BOND available for purchase'
+                      ? 'PHOENIX is over peg'
+                      : getDisplayBalance(bondsPurchasable, 18, 4) + ' PBOND available for purchase'
                   }
                   onExchange={handleBuyBonds}
                   disabled={!bondStat || isBondRedeemable}
@@ -91,14 +91,14 @@ const Pit: React.FC = () => {
               </StyledCardWrapper>
               <StyledStatsWrapper>
                 <ExchangeStat
-                  tokenName="DARK MAGIK"
+                  tokenName="PHOENIX"
                   description="Last-Hour TWAP Price"
                   price={getDisplayBalance(cashPrice, 18, 4)}
                 />
                 <Spacer size="md" />
                 <ExchangeStat
-                  tokenName="3BOND"
-                  description="Current Price: (DARK MAGIK)^2"
+                  tokenName="PBOND"
+                  description="Current Price: (PHOENIX)^2"
                   price={Number(bondStat?.tokenInFtm).toFixed(2) || '-'}
                 />
               </StyledStatsWrapper>
@@ -106,13 +106,13 @@ const Pit: React.FC = () => {
                 <ExchangeCard
                   action="Redeem"
                   fromToken={tombFinance.TBOND}
-                  fromTokenName="3BOND"
+                  fromTokenName="PBOND"
                   toToken={tombFinance.TOMB}
-                  toTokenName="DARK MAGIK"
-                  priceDesc={`${getDisplayBalance(bondBalance)} 3BOND Available in wallet`}
+                  toTokenName="PHOENIX"
+                  priceDesc={`${getDisplayBalance(bondBalance)} PBOND Available in wallet`}
                   onExchange={handleRedeemBonds}
                   disabled={!bondStat || bondBalance.eq(0) || !isBondRedeemable}
-                  disabledDescription={!isBondRedeemable ? `Enabled when DARK MAGIK > ${BOND_REDEEM_PRICE}FTM` : null}
+                  disabledDescription={!isBondRedeemable ? `Enabled when PHOENIX > ${BOND_REDEEM_PRICE}FTM` : null}
                 />
               </StyledCardWrapper>
             </StyledBond>

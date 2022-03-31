@@ -75,7 +75,7 @@ const Masonry = () => {
       {!!account ? (
         <>
           <Typography color="textPrimary" align="center" variant="h3" gutterBottom>
-            3Room
+            PRoom
           </Typography>
           <Box mt={5}>
             <Grid container justify="center" spacing={3}>
@@ -99,7 +99,7 @@ const Masonry = () => {
                 <Card className={classes.gridItem}>
                   <CardContent align="center">
                     <Typography>
-                      DARK MAGIK Price<small> (TWAP)</small>
+                      Phoenix Price<small> (TWAP)</small>
                     </Typography>
                     <Typography>{rebateStats.tombPrice.toFixed(4)} FTM</Typography>
                   </CardContent>

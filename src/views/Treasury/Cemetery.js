@@ -26,10 +26,10 @@ const assetList = [
     depositTokenName: 'MSHARE-WFTM LP',
   },
   {
-    depositTokenName: 'DARK MAGIK-WFTM LP',
+    depositTokenName: 'PHOENIX-WFTM LP',
   },
   {
-    depositTokenName: 'DMSHARES',
+    depositTokenName: 'PSHARES',
   },
   {
     depositTokenName: 'MSHARE-WFTM LP',
@@ -118,21 +118,15 @@ const Cemetery = () => {
                     <Card style={{ height: "auto" }}>
                       <CardContent align="center">
                         <Typography variant="h5">
-                          DARK MAGIK-WFTM LP:
+                          PHOENIX-BUSD LP:
                         </Typography>
                         <CountUp style={{ fontSize: '25px' }} end={balance_2magik_wftm} separator="," prefix="$" />
                       </CardContent>
                       <CardContent align="center">
                         <Typography variant="h5">
-                          DMSHARES-WFTM LP:
+                          PSHARES-BUSD LP:
                         </Typography>
                         <CountUp style={{ fontSize: '25px' }} end={balance_3shares_wftm} separator="," prefix="$" />
-                      </CardContent>
-                      <CardContent align="center">
-                        <Typography variant="h5">
-                          MSHARES-WFTM LP:
-                        </Typography>
-                        <CountUp style={{ fontSize: '25px' }} end={balance_2shares_wftm} separator="," prefix="$" />
                       </CardContent>
                     </Card>
                   </Grid>
@@ -140,21 +134,15 @@ const Cemetery = () => {
                     <Card style={{ height: "auto" }}>
                       <CardContent align="center">
                         <Typography variant="h5">
-                          DARK MAGIK:
+                          PHOENIX:
                         </Typography>
                         <CountUp style={{ fontSize: '25px' }} end={balance_2magik} separator="," prefix="$" />
                       </CardContent>
                       <CardContent align="center">
                         <Typography variant="h5">
-                          DMSHARES:
+                          PSHARES:
                         </Typography>
                         <CountUp style={{ fontSize: '25px' }} end={balance_3shares} separator="," prefix="$" />
-                      </CardContent>
-                      <CardContent align="center">
-                        <Typography variant="h5">
-                          MSHARES:
-                        </Typography>
-                        <CountUp style={{ fontSize: '25px' }} end={balance_2shares} separator="," prefix="$" />
                       </CardContent>
                     </Card>
                   </Grid>
